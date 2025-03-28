@@ -133,6 +133,7 @@ namespace ShopOfTanks
 
             int x = 30;
             int y = 25;
+
             for(int i=0; i < products.Count; i++)   
             {
                 products[i].picture.Location = new Point(x, y);
@@ -301,7 +302,7 @@ namespace ShopOfTanks
         private void MainSelectbutton_Click(object sender, EventArgs e)
         {
             SelectedForm select = new SelectedForm();
-            select.ShowDialog();
+            select.ShowDialog(); 
         }
     }
 }

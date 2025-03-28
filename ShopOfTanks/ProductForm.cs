@@ -18,6 +18,14 @@ namespace ShopOfTanks
         {
             InitializeComponent();
 
+            if(AusForm.username != "")
+            {
+                AddSelectedButton.Visible = true;
+            }
+            else
+            {
+                AddSelectedButton.Visible = false;
+            }
             product = _product;
             
             Text = product.name;
@@ -37,7 +45,14 @@ namespace ShopOfTanks
 
         private void AddSelectedButton_Click(object sender, EventArgs e)
         {
-            SelectedForm.selectProduct.Add(product);
+            if (SelectedForm.selectProduct.ContainsKey(product))
+            {
+                SelectedForm.selectProduct[product]++;
+            }
+            else
+            {
+                SelectedForm.selectProduct.Add(product, 1);
+            }
         }
     }
 }

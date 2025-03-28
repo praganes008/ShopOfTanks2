@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AusPanel = new System.Windows.Forms.Panel();
+            this.MainSelectbutton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
             this.NameLabel = new System.Windows.Forms.Label();
             this.AusButton = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainSelectbutton = new System.Windows.Forms.Button();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -68,6 +68,16 @@
             this.AusPanel.Name = "AusPanel";
             this.AusPanel.Size = new System.Drawing.Size(1446, 67);
             this.AusPanel.TabIndex = 0;
+            // 
+            // MainSelectbutton
+            // 
+            this.MainSelectbutton.Location = new System.Drawing.Point(1071, 12);
+            this.MainSelectbutton.Name = "MainSelectbutton";
+            this.MainSelectbutton.Size = new System.Drawing.Size(208, 44);
+            this.MainSelectbutton.TabIndex = 3;
+            this.MainSelectbutton.Text = "избранное";
+            this.MainSelectbutton.UseVisualStyleBackColor = true;
+            this.MainSelectbutton.Click += new System.EventHandler(this.MainSelectbutton_Click);
             // 
             // RegButton
             // 
@@ -166,6 +176,7 @@
             this.CountryComboBox.Items.AddRange(new object[] {
             "",
             "Франция",
+            "Германия",
             "Италия",
             "США",
             "СССР",
@@ -271,16 +282,6 @@
             this.DeleteTankToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
             this.DeleteTankToolStripMenuItem.Text = "Удалить танк";
             this.DeleteTankToolStripMenuItem.Click += new System.EventHandler(this.DeleteTankToolStripMenuItem_Click);
-            // 
-            // MainSelectbutton
-            // 
-            this.MainSelectbutton.Location = new System.Drawing.Point(1071, 12);
-            this.MainSelectbutton.Name = "MainSelectbutton";
-            this.MainSelectbutton.Size = new System.Drawing.Size(208, 44);
-            this.MainSelectbutton.TabIndex = 3;
-            this.MainSelectbutton.Text = "избранное";
-            this.MainSelectbutton.UseVisualStyleBackColor = true;
-            this.MainSelectbutton.Click += new System.EventHandler(this.MainSelectbutton_Click);
             // 
             // MainForm
             // 
