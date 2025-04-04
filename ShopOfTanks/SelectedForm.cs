@@ -21,7 +21,7 @@ namespace ShopOfTanks
             Text = "Избранное" + AusForm.username;
 
             int x = 30;
-            int y = 25;
+            int y = 150;
 
             foreach (KeyValuePair<Product, int> select_product in selectProduct)                                                   //foreach - для каждого (продукта в нашем массиве(selectProduct))
             {
@@ -81,10 +81,11 @@ namespace ShopOfTanks
                 kol.Location = new Point(x + 650, y + 25);
                 kol.Size = new Size(150, 20);
                 kol.Value = select_product.Value;
+                kol.ValueChanged += new EventHandler(count_changed);
                 Controls.Add(kol);
 
                 Label lbl_price = new Label();
-                lbl_price.Location = new Point(x + 650, y+55);
+                lbl_price.Location = new Point(x + 650, y+50);
                 lbl_price.Size = new Size(300, 20);
                 lbl_price.Text = "Цена: " + select_product.Key.price.ToString();
                 Controls.Add(lbl_price);
@@ -92,7 +93,7 @@ namespace ShopOfTanks
                 Label lbl_stoim = new Label();
                 lbl_stoim.Location = new Point(x + 650, y + 75);
                 lbl_stoim.Size = new Size(300, 20);
-                lbl_stoim.Text = "Стоимость: ";
+                lbl_stoim.Text = "Стоимость: " + select_product.Key.price.ToString();
                 Controls.Add(lbl_stoim);
                 #endregion
 
@@ -112,5 +113,34 @@ namespace ShopOfTanks
             }
 
         }
+
+        private void count_changed(object sender, EventArgs e)
+        {
+            NumericUpDown Num = (NumericUpDown)sender;
+
+            for(int i=0; i<selectProduct.Count; i++)
+            {
+                int price = 0;
+                if(Num.Location == new Point(680, 220*i + 175 + AutoScrollPosition.Y))
+                {
+                    foreach(Control ctrl in Controls)
+                    {
+                        if (ctrl is Label && ctrl.Location == new Point(680, 220 * i + 200))
+                        {
+                            price = Convert.ToInt32(ctrl.Text.Replace("Цена: ", ""));
+                        }
+                    }
+
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is Label && ctrl.Location == new Point(680, 220 * i + 225 + AutoScrollPosition.Y))
+                        {
+                            ctrl.Text = "Стоимость: " + (price * Num.Value).ToString();
+                        }
+                    }
+                }
+            }
+        }
+        //вставить вызов функции пересчета общей стоимости
     }
 }
