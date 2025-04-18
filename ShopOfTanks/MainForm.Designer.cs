@@ -51,6 +51,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -59,6 +60,7 @@
             // AusPanel
             // 
             this.AusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AusPanel.Controls.Add(this.button1);
             this.AusPanel.Controls.Add(this.MainSelectbutton);
             this.AusPanel.Controls.Add(this.RegButton);
             this.AusPanel.Controls.Add(this.NameLabel);
@@ -71,7 +73,7 @@
             // 
             // MainSelectbutton
             // 
-            this.MainSelectbutton.Location = new System.Drawing.Point(1071, 12);
+            this.MainSelectbutton.Location = new System.Drawing.Point(820, 9);
             this.MainSelectbutton.Name = "MainSelectbutton";
             this.MainSelectbutton.Size = new System.Drawing.Size(208, 44);
             this.MainSelectbutton.TabIndex = 3;
@@ -283,6 +285,16 @@
             this.DeleteTankToolStripMenuItem.Text = "Удалить танк";
             this.DeleteTankToolStripMenuItem.Click += new System.EventHandler(this.DeleteTankToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1094, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 44);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "правила";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -334,6 +346,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddTankContextMenu;
         private System.Windows.Forms.ToolStripMenuItem DeleteTankToolStripMenuItem;
         private System.Windows.Forms.Button MainSelectbutton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

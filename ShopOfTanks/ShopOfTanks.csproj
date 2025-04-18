@@ -84,6 +84,12 @@
     <Compile Include="RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ruls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ruls.Designer.cs">
+      <DependentUpon>Ruls.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ruls.resx">
+      <DependentUpon>Ruls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectedForm.resx">
       <DependentUpon>SelectedForm.cs</DependentUpon>

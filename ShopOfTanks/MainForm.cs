@@ -47,7 +47,6 @@ namespace ShopOfTanks
 
     public partial class MainForm : Form
     {
-        //Product[] products = new Product[12];
 
         public static List<Product> products = new List<Product>();
 
@@ -303,6 +302,12 @@ namespace ShopOfTanks
         {
             SelectedForm select = new SelectedForm();
             select.ShowDialog(); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ruls rul = new Ruls();
+            rul.ShowDialog();
         }
     }
 }

@@ -54,5 +54,6 @@ namespace ShopOfTanks
                 SelectedForm.selectProduct.Add(product, 1);
             }
         }
+
     }
 }

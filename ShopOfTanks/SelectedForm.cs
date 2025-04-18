@@ -94,7 +94,7 @@ namespace ShopOfTanks
                 Label lbl_price = new Label();
                 lbl_price.Location = new Point(x + 650, y + 50);
                 lbl_price.Size = new Size(300, 20);
-                lbl_price.Text = "Цена: " + select_product.Key.price.ToString();
+                lbl_price.Text = "Цена млн.руб.: " + select_product.Key.price.ToString();
                 Controls.Add(lbl_price);
 
                 Label lbl_stoim = new Label();
@@ -103,11 +103,42 @@ namespace ShopOfTanks
                 lbl_stoim.Text = "Стоимость: " + (select_product.Key.price * select_product.Value).ToString();
                 Controls.Add(lbl_stoim);
                 #endregion
-               
+
+                #region кнопка удаления
+                Button btn_del = new Button();
+                btn_del.Location = new Point(x + 900, y + 20);
+                btn_del.Size = new Size(200, 30);
+                btn_del.Text = "удалить";
+                btn_del.Click += new EventHandler(DelClick);
+                Controls.Add(btn_del);
+                #endregion
                 y += 220;
             }
             Calculate();
             TotalPriceLBL.Text = "Общая стоимость: " + TotalPrice.ToString();
+        }
+
+        void DelClick(object sender, EventArgs e)
+        {
+            int i = 0;
+            Dictionary<Product, int> selectProduct1 = new Dictionary<Product, int>();
+            Button btn = (Button)sender;
+            foreach (KeyValuePair<Product, int> select_product in selectProduct)
+            {
+                
+                Product product = select_product.Key;
+                if(btn.Location == new Point(30 + 900, 220 * i + 150 + 20 + AutoScrollPosition.Y))
+                {
+
+                }
+                else
+                {
+                    selectProduct1[select_product.Key] = select_product.Value;
+                }
+                i++;
+            }
+            selectProduct = selectProduct1;
+            Redraw();
         }
 
         private void open_product(object sender, EventArgs e)
@@ -175,10 +206,10 @@ namespace ShopOfTanks
 
         void Calculate()
         {
-            int TotalPrice = 0;
+            TotalPrice = 0;
             foreach (KeyValuePair<Product, int> select_product in selectProduct)
             {
-                TotalPrice += select_product.Value + select_product.Key.price;
+                TotalPrice += select_product.Value * select_product.Key.price;
             }
         }
     }
