@@ -94,7 +94,7 @@ namespace ShopOfTanks
                 Label lbl_price = new Label();
                 lbl_price.Location = new Point(x + 650, y + 50);
                 lbl_price.Size = new Size(300, 20);
-                lbl_price.Text = "Цена млн.руб.: " + select_product.Key.price.ToString();
+                lbl_price.Text = "Цена: " + select_product.Key.price.ToString();
                 Controls.Add(lbl_price);
 
                 Label lbl_stoim = new Label();

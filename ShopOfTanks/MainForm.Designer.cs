@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AusPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainSelectbutton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
             this.NameLabel = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FeedBackButton = new System.Windows.Forms.Button();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -60,6 +61,7 @@
             // AusPanel
             // 
             this.AusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AusPanel.Controls.Add(this.FeedBackButton);
             this.AusPanel.Controls.Add(this.button1);
             this.AusPanel.Controls.Add(this.MainSelectbutton);
             this.AusPanel.Controls.Add(this.RegButton);
@@ -71,9 +73,19 @@
             this.AusPanel.Size = new System.Drawing.Size(1446, 67);
             this.AusPanel.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(894, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 44);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "правила";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainSelectbutton
             // 
-            this.MainSelectbutton.Location = new System.Drawing.Point(820, 9);
+            this.MainSelectbutton.Location = new System.Drawing.Point(680, 9);
             this.MainSelectbutton.Name = "MainSelectbutton";
             this.MainSelectbutton.Size = new System.Drawing.Size(208, 44);
             this.MainSelectbutton.TabIndex = 3;
@@ -83,9 +95,9 @@
             // 
             // RegButton
             // 
-            this.RegButton.Location = new System.Drawing.Point(466, 9);
+            this.RegButton.Location = new System.Drawing.Point(423, 9);
             this.RegButton.Name = "RegButton";
-            this.RegButton.Size = new System.Drawing.Size(251, 40);
+            this.RegButton.Size = new System.Drawing.Size(251, 44);
             this.RegButton.TabIndex = 2;
             this.RegButton.Text = "Зарегистрироваться";
             this.RegButton.UseVisualStyleBackColor = true;
@@ -285,15 +297,15 @@
             this.DeleteTankToolStripMenuItem.Text = "Удалить танк";
             this.DeleteTankToolStripMenuItem.Click += new System.EventHandler(this.DeleteTankToolStripMenuItem_Click);
             // 
-            // button1
+            // FeedBackButton
             // 
-            this.button1.Location = new System.Drawing.Point(1094, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "правила";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.FeedBackButton.Location = new System.Drawing.Point(1082, 9);
+            this.FeedBackButton.Name = "FeedBackButton";
+            this.FeedBackButton.Size = new System.Drawing.Size(203, 44);
+            this.FeedBackButton.TabIndex = 5;
+            this.FeedBackButton.Text = "задать вопрос";
+            this.FeedBackButton.UseVisualStyleBackColor = true;
+            this.FeedBackButton.Click += new System.EventHandler(this.FeedBackButton_Click);
             // 
             // MainForm
             // 
@@ -347,6 +359,7 @@
         private System.Windows.Forms.ToolStripMenuItem DeleteTankToolStripMenuItem;
         private System.Windows.Forms.Button MainSelectbutton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button FeedBackButton;
     }
 }
 

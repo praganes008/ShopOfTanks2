@@ -309,5 +309,11 @@ namespace ShopOfTanks
             Ruls rul = new Ruls();
             rul.ShowDialog();
         }
+
+        private void FeedBackButton_Click(object sender, EventArgs e)
+        {
+            FeedBackForm FBF = new FeedBackForm();
+            FBF.ShowDialog();
+        }
     }
 }
