@@ -13,7 +13,7 @@ namespace ShopOfTanks
     public partial class SelectedForm : Form
     {
         public static Dictionary<Product, int> selectProduct = new Dictionary<Product, int>();
-        int TotalPrice = 0;
+        public static int TotalPrice = 0;
 
         public SelectedForm()
         {
@@ -26,6 +26,7 @@ namespace ShopOfTanks
         {
             Controls.Clear();
             Controls.Add(TotalPriceLBL);
+            Controls.Add(Mailbtn);
 
             int x = 30;
             int y = 150;
@@ -211,6 +212,12 @@ namespace ShopOfTanks
             {
                 TotalPrice += select_product.Value * select_product.Key.price;
             }
+        }
+
+        private void Mailbtn_Click(object sender, EventArgs e)
+        {
+            SendMailForm SMF = new SendMailForm();
+            SMF.ShowDialog();
         }
     }
 }
