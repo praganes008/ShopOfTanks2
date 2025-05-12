@@ -19,6 +19,7 @@ namespace ShopOfTanks
         {
             InitializeComponent();
 
+            //Mailbtn.Visible = false;
             Text = "Избранное" + AusForm.username;
             Redraw();
         }

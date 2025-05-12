@@ -27,7 +27,8 @@ namespace ShopOfTanks
                                                 textBoxName.Text + ", " +
                                                 textBoxFamil.Text + ", " +
                                                 textBoxLogin.Text + ", " +
-                                                textBoxPassvord.Text + ", 0" +
+                                                textBoxPassvord.Text + ", 0, " +
+                                                MailTB.Text +
                                                 Environment.NewLine);
                     MessageBox.Show("Регистрация прошла успешно!");
                     Close();

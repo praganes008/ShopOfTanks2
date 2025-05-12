@@ -12,6 +12,7 @@ namespace ShopOfTanks
 {
     public partial class AusForm : Form
     {
+        public static string email = "";
         public static string username = "";
         public static bool isAdmin = false;
         public AusForm()
@@ -29,6 +30,12 @@ namespace ShopOfTanks
                 {
                     username = parts[0] + " " + parts[1];
                     isAdmin = (parts[4]=="1");
+                    try                                                                                         //исключение, если не выполнено то выполняется catch
+                    {
+                       email = parts[5];
+                    }
+                    catch(Exception) 
+                    { }
                     Close();
                     return;
                 }

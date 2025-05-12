@@ -45,6 +45,7 @@ namespace ShopOfTanks
 
         private void AddSelectedButton_Click(object sender, EventArgs e)
         {
+            //SelectedForm.Mailbtn.Visible = true;
             if (SelectedForm.selectProduct.ContainsKey(product))
             {
                 SelectedForm.selectProduct[product]++;

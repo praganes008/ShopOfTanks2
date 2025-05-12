@@ -17,6 +17,7 @@ namespace ShopOfTanks
         public SendMailForm()
         {
             InitializeComponent();
+            AdressTB.Text = AusForm.email;
         }
 
         private void Sendbtn_Click(object sender, EventArgs e)
