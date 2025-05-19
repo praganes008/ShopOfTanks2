@@ -33,20 +33,20 @@
             // 
             // rulTB
             // 
-            this.rulTB.Enabled = false;
-            this.rulTB.Location = new System.Drawing.Point(12, 12);
+            this.rulTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rulTB.Location = new System.Drawing.Point(0, 0);
             this.rulTB.Multiline = true;
             this.rulTB.Name = "rulTB";
             this.rulTB.ReadOnly = true;
-            this.rulTB.Size = new System.Drawing.Size(1230, 1587);
+            this.rulTB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.rulTB.Size = new System.Drawing.Size(1272, 933);
             this.rulTB.TabIndex = 0;
             // 
             // Ruls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1275, 632);
+            this.ClientSize = new System.Drawing.Size(1272, 933);
             this.Controls.Add(this.rulTB);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

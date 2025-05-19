@@ -35,13 +35,13 @@ namespace ShopOfTanks
                 MailAddress toAdress = new MailAddress(AdressTB.Text);
                 //формирование письма
                 using (MailMessage mailMessage = new MailMessage(fromAdress, toAdress))
-                using (SmtpClient smtpClient = new SmtpClient())                                                             //смтп - отправка сообщенийй
+                using (SmtpClient smtpClient = new SmtpClient())                                                                                                    //смтп - отправка сообщенийй
                 {
                     //тема письма
                     mailMessage.Subject = "Список избранных товаров магазина: ShOT";                                                                         //присвоение темы письму из комбобокса
                                                                                                                                                              //тело(текст) письма                                                                                                            //текст письма
                     mailMessage.Body = "Здравствуйте, " + AusForm.username + Environment.NewLine + "мы прислали вам список избранных товаров онлайн магазина: ShOT";
-                    mailMessage.IsBodyHtml = true;                                                                                  //при формировании сообщ. текст письма будет представлен в html
+                    mailMessage.IsBodyHtml = true;                                                                                                              //при формировании сообщ. текст письма будет представлен в html
 
                     System.IO.File.AppendAllText("Избранное.csv", "Название,Количесво,Цена");
                     foreach (KeyValuePair<Product, int> select_product in SelectedForm.selectProduct)
@@ -50,7 +50,9 @@ namespace ShopOfTanks
                         System.IO.File.AppendAllText("Избранное_" + AusForm.username + ".csv", Environment.NewLine + product.name + "," + select_product.Value + "," + product.price);
                     }
 
-                    mailMessage.Attachments.Add(new Attachment("Избранное_" + AusForm.username + ".csv", Environment.NewLine + "Общая стоимость:" + SelectedForm.TotalPrice));
+                    System.IO.File.AppendAllText("Избранное_" + AusForm.username + ".csv", Environment.NewLine + "Общая стоимость:" + SelectedForm.TotalPrice);
+
+                    mailMessage.Attachments.Add(new Attachment("Избранное_" + AusForm.username + ".csv"));
 
                     smtpClient.Host = "smtp.mail.ru";
                     smtpClient.Port = 587;

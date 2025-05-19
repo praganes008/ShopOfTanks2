@@ -35,7 +35,7 @@
             // TotalPriceLBL
             // 
             this.TotalPriceLBL.AutoSize = true;
-            this.TotalPriceLBL.Location = new System.Drawing.Point(600, 50);
+            this.TotalPriceLBL.Location = new System.Drawing.Point(584, 14);
             this.TotalPriceLBL.Name = "TotalPriceLBL";
             this.TotalPriceLBL.Size = new System.Drawing.Size(280, 25);
             this.TotalPriceLBL.TabIndex = 0;
