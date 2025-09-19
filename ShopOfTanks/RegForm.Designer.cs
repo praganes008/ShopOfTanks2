@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.MailTB = new System.Windows.Forms.TextBox();
+            this.NoPasLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -58,6 +59,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(307, 30);
             this.textBoxName.TabIndex = 1;
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxName_KeyPress);
             // 
             // textBoxFamil
             // 
@@ -65,6 +67,7 @@
             this.textBoxFamil.Name = "textBoxFamil";
             this.textBoxFamil.Size = new System.Drawing.Size(307, 30);
             this.textBoxFamil.TabIndex = 2;
+            this.textBoxFamil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFamil_KeyPress);
             // 
             // label1
             // 
@@ -104,9 +107,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 312);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 25);
+            this.label4.Size = new System.Drawing.Size(136, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Пароль";
+            this.label4.Text = "Пароль(min4)";
             // 
             // label5
             // 
@@ -152,11 +155,23 @@
             this.MailTB.Size = new System.Drawing.Size(311, 30);
             this.MailTB.TabIndex = 12;
             // 
+            // NoPasLbl
+            // 
+            this.NoPasLbl.AutoSize = true;
+            this.NoPasLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.NoPasLbl.ForeColor = System.Drawing.Color.Red;
+            this.NoPasLbl.Location = new System.Drawing.Point(8, 373);
+            this.NoPasLbl.Name = "NoPasLbl";
+            this.NoPasLbl.Size = new System.Drawing.Size(408, 25);
+            this.NoPasLbl.TabIndex = 13;
+            this.NoPasLbl.Text = "*пароль должен состоять из 4+ символов";
+            // 
             // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 619);
+            this.Controls.Add(this.NoPasLbl);
             this.Controls.Add(this.MailTB);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
@@ -194,5 +209,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox MailTB;
+        private System.Windows.Forms.Label NoPasLbl;
     }
 }

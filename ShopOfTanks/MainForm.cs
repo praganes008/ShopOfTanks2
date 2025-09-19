@@ -63,7 +63,7 @@ namespace ShopOfTanks
 
         }
 
-        private void PicProduct_Click(object sender, EventArgs e)
+        private void PicProduct_Click(object sender, EventArgs e)//клик на картинку
         {
             PictureBox pb = (PictureBox)sender;
             for(int i = 0; i< products.Count; i++)
@@ -77,7 +77,7 @@ namespace ShopOfTanks
             
         }
 
-        private void lblProduct_Click(object sender, EventArgs e)
+        private void lblProduct_Click(object sender, EventArgs e)//клик на надпись
         {
             Label lbl = (Label)sender;
             for (int i = 0; i < products.Count; i++)
@@ -91,7 +91,7 @@ namespace ShopOfTanks
             
         }
 
-        private void HideButton_Click(object sender, EventArgs e)
+        private void HideButton_Click(object sender, EventArgs e)//развернуть/свернуть
         {
             if (FiltrPanel.Height == HideButton.Height)
             {
@@ -105,13 +105,13 @@ namespace ShopOfTanks
             }
         }
 
-        private void RegButton_Click(object sender, EventArgs e)
+        private void RegButton_Click(object sender, EventArgs e)//кнопка регистрации
         {
             RegForm frm = new RegForm();
             frm.ShowDialog();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)//загрузка MainForm
         {
 
                 products.Clear();
@@ -222,7 +222,7 @@ namespace ShopOfTanks
             SearchButton_Click(null, null);
         }
 
-        private void AusButton_Click(object sender, EventArgs e)
+        private void AusButton_Click(object sender, EventArgs e)//кнопка войти
         {
             if(AusButton.Text == "Войти")/*AusForm.username == ""*/
             {
@@ -270,7 +270,7 @@ namespace ShopOfTanks
            
         }
 
-        private void AddTankContextMenu_Click(object sender, EventArgs e)
+        private void AddTankContextMenu_Click(object sender, EventArgs e)//добавить танк клик
         {
             if(AusForm.isAdmin)
             {
@@ -284,7 +284,7 @@ namespace ShopOfTanks
             MainForm_Load(null, null);
         }
 
-        private void DeleteTankToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteTankToolStripMenuItem_Click(object sender, EventArgs e)//удалить танк клик
         {
             if (AusForm.isAdmin)
             {
@@ -298,19 +298,19 @@ namespace ShopOfTanks
             MainForm_Load(null, null);
         }
 
-        private void MainSelectbutton_Click(object sender, EventArgs e)
+        private void MainSelectbutton_Click(object sender, EventArgs e)//избранное
         {
             SelectedForm select = new SelectedForm();
             select.ShowDialog(); 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//правила
         {
             Ruls rul = new Ruls();
             rul.ShowDialog();
         }
 
-        private void FeedBackButton_Click(object sender, EventArgs e)
+        private void FeedBackButton_Click(object sender, EventArgs e)//обратная связь
         {
             FeedBackForm FBF = new FeedBackForm();
             FBF.ShowDialog();
