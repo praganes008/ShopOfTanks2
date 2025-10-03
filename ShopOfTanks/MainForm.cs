@@ -44,11 +44,17 @@ namespace ShopOfTanks
 
     }
 
-
     public partial class MainForm : Form
     {
 
         public static List<Product> products = new List<Product>();
+
+        /*public Color PanelColor1 // Публичное свойство для цвета панели
+        {
+            get { return FiltrPanel.BackColor; } // Возвращает текущий цвет панели
+            set { FiltrPanel.BackColor = value; } // Устанавливает цвет панели
+        }*/
+
 
         public MainForm()
         {
@@ -60,8 +66,20 @@ namespace ShopOfTanks
             HideButton.Text = "развернуть";
             MainSelectbutton.Visible = false;
 
-
+           /* if (SettingsForm.Form1 == 1)
+            {
+                AusPanel.BackColor = Color.Red;
+            }
+            if (SettingsForm.Form1 == 2)
+            {
+                AusPanel.BackColor = Color.Orange;
+            }
+            if (SettingsForm.Form1 == 3)
+            {
+                AusPanel.BackColor = Color.Yellow;
+            }*/
         }
+
 
         private void PicProduct_Click(object sender, EventArgs e)//клик на картинку
         {
@@ -314,6 +332,59 @@ namespace ShopOfTanks
         {
             FeedBackForm FBF = new FeedBackForm();
             FBF.ShowDialog();
+        }
+
+        private void SetBtn_Click(object sender, EventArgs e)//настройки
+        {
+            SettingsForm StsFrm = new SettingsForm();
+            StsFrm.Show();
+        }
+
+        private void RedrawBtn_Click(object sender, EventArgs e)
+        {
+            #region цвета для AusPanel
+            RedrawBtn.Visible = false;
+            if (SettingsForm.Form1 == 1)
+            {
+                AusPanel.BackColor = Color.Red;
+            }
+            if (SettingsForm.Form1 == 2)
+            {
+                AusPanel.BackColor = Color.Orange;
+            }
+            if (SettingsForm.Form1 == 3)
+            {
+                AusPanel.BackColor = Color.Yellow;
+            }
+            if (SettingsForm.Form1 == 4)
+            {
+                AusPanel.BackColor = Color.Green;
+            }
+            if (SettingsForm.Form1 == 5)
+            {
+                AusPanel.BackColor = Color.LightBlue;
+            }
+            if (SettingsForm.Form1 == 6)
+            {
+                AusPanel.BackColor = Color.Blue;
+            }
+            if (SettingsForm.Form1 == 7)
+            {
+                AusPanel.BackColor = Color.Violet;
+            }
+            if (SettingsForm.Form1 == 8)
+            {
+                AusPanel.BackColor = Color.White;
+            }
+            if (SettingsForm.Form1 == 9)
+            {
+                AusPanel.BackColor = Color.Gray;
+            }
+            if (SettingsForm.Form1 == 10)
+            {
+                AusPanel.BackColor = Color.Black;
+            }
+            #endregion
         }
     }
 }

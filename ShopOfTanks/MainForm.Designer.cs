@@ -30,12 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AusPanel = new System.Windows.Forms.Panel();
+            this.FeedBackButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.MainSelectbutton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
             this.NameLabel = new System.Windows.Forms.Label();
             this.AusButton = new System.Windows.Forms.Button();
             this.FiltrPanel = new System.Windows.Forms.Panel();
+            this.SetBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.mTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +54,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FeedBackButton = new System.Windows.Forms.Button();
+            this.RedrawBtn = new System.Windows.Forms.Button();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -72,6 +74,16 @@
             this.AusPanel.Name = "AusPanel";
             this.AusPanel.Size = new System.Drawing.Size(1446, 67);
             this.AusPanel.TabIndex = 0;
+            // 
+            // FeedBackButton
+            // 
+            this.FeedBackButton.Location = new System.Drawing.Point(1082, 9);
+            this.FeedBackButton.Name = "FeedBackButton";
+            this.FeedBackButton.Size = new System.Drawing.Size(203, 44);
+            this.FeedBackButton.TabIndex = 5;
+            this.FeedBackButton.Text = "задать вопрос";
+            this.FeedBackButton.UseVisualStyleBackColor = true;
+            this.FeedBackButton.Click += new System.EventHandler(this.FeedBackButton_Click);
             // 
             // button1
             // 
@@ -125,6 +137,8 @@
             // FiltrPanel
             // 
             this.FiltrPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.FiltrPanel.Controls.Add(this.RedrawBtn);
+            this.FiltrPanel.Controls.Add(this.SetBtn);
             this.FiltrPanel.Controls.Add(this.label5);
             this.FiltrPanel.Controls.Add(this.mTextBox);
             this.FiltrPanel.Controls.Add(this.label4);
@@ -142,6 +156,16 @@
             this.FiltrPanel.Name = "FiltrPanel";
             this.FiltrPanel.Size = new System.Drawing.Size(1446, 131);
             this.FiltrPanel.TabIndex = 1;
+            // 
+            // SetBtn
+            // 
+            this.SetBtn.Location = new System.Drawing.Point(1296, 0);
+            this.SetBtn.Name = "SetBtn";
+            this.SetBtn.Size = new System.Drawing.Size(150, 40);
+            this.SetBtn.TabIndex = 12;
+            this.SetBtn.Text = "настройки";
+            this.SetBtn.UseVisualStyleBackColor = true;
+            this.SetBtn.Click += new System.EventHandler(this.SetBtn_Click);
             // 
             // label5
             // 
@@ -297,15 +321,15 @@
             this.DeleteTankToolStripMenuItem.Text = "Удалить танк";
             this.DeleteTankToolStripMenuItem.Click += new System.EventHandler(this.DeleteTankToolStripMenuItem_Click);
             // 
-            // FeedBackButton
+            // RedrawBtn
             // 
-            this.FeedBackButton.Location = new System.Drawing.Point(1082, 9);
-            this.FeedBackButton.Name = "FeedBackButton";
-            this.FeedBackButton.Size = new System.Drawing.Size(203, 44);
-            this.FeedBackButton.TabIndex = 5;
-            this.FeedBackButton.Text = "задать вопрос";
-            this.FeedBackButton.UseVisualStyleBackColor = true;
-            this.FeedBackButton.Click += new System.EventHandler(this.FeedBackButton_Click);
+            this.RedrawBtn.Location = new System.Drawing.Point(1169, 0);
+            this.RedrawBtn.Name = "RedrawBtn";
+            this.RedrawBtn.Size = new System.Drawing.Size(116, 40);
+            this.RedrawBtn.TabIndex = 13;
+            this.RedrawBtn.Text = "обновить";
+            this.RedrawBtn.UseVisualStyleBackColor = true;
+            this.RedrawBtn.Click += new System.EventHandler(this.RedrawBtn_Click);
             // 
             // MainForm
             // 
@@ -360,6 +384,8 @@
         private System.Windows.Forms.Button MainSelectbutton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button FeedBackButton;
+        private System.Windows.Forms.Button SetBtn;
+        private System.Windows.Forms.Button RedrawBtn;
     }
 }
 

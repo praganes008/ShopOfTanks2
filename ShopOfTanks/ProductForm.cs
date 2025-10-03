@@ -18,7 +18,7 @@ namespace ShopOfTanks
         {
             InitializeComponent();
 
-            if(AusForm.username != "")
+            if (AusForm.username != "")
             {
                 AddSelectedButton.Visible = true;
             }
