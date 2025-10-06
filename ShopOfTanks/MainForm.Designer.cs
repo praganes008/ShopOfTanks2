@@ -37,6 +37,7 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.AusButton = new System.Windows.Forms.Button();
             this.FiltrPanel = new System.Windows.Forms.Panel();
+            this.RedrawBtn = new System.Windows.Forms.Button();
             this.SetBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.mTextBox = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RedrawBtn = new System.Windows.Forms.Button();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -156,6 +156,17 @@
             this.FiltrPanel.Name = "FiltrPanel";
             this.FiltrPanel.Size = new System.Drawing.Size(1446, 131);
             this.FiltrPanel.TabIndex = 1;
+            // 
+            // RedrawBtn
+            // 
+            this.RedrawBtn.Location = new System.Drawing.Point(1169, 0);
+            this.RedrawBtn.Name = "RedrawBtn";
+            this.RedrawBtn.Size = new System.Drawing.Size(116, 40);
+            this.RedrawBtn.TabIndex = 13;
+            this.RedrawBtn.Text = "обновить";
+            this.RedrawBtn.UseVisualStyleBackColor = true;
+            this.RedrawBtn.Visible = false;
+            this.RedrawBtn.Click += new System.EventHandler(this.RedrawBtn_Click);
             // 
             // SetBtn
             // 
@@ -320,16 +331,6 @@
             this.DeleteTankToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
             this.DeleteTankToolStripMenuItem.Text = "Удалить танк";
             this.DeleteTankToolStripMenuItem.Click += new System.EventHandler(this.DeleteTankToolStripMenuItem_Click);
-            // 
-            // RedrawBtn
-            // 
-            this.RedrawBtn.Location = new System.Drawing.Point(1169, 0);
-            this.RedrawBtn.Name = "RedrawBtn";
-            this.RedrawBtn.Size = new System.Drawing.Size(116, 40);
-            this.RedrawBtn.TabIndex = 13;
-            this.RedrawBtn.Text = "обновить";
-            this.RedrawBtn.UseVisualStyleBackColor = true;
-            this.RedrawBtn.Click += new System.EventHandler(this.RedrawBtn_Click);
             // 
             // MainForm
             // 

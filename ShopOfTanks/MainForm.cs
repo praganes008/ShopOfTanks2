@@ -49,13 +49,6 @@ namespace ShopOfTanks
 
         public static List<Product> products = new List<Product>();
 
-        /*public Color PanelColor1 // Публичное свойство для цвета панели
-        {
-            get { return FiltrPanel.BackColor; } // Возвращает текущий цвет панели
-            set { FiltrPanel.BackColor = value; } // Устанавливает цвет панели
-        }*/
-
-
         public MainForm()
         {
          
@@ -66,18 +59,6 @@ namespace ShopOfTanks
             HideButton.Text = "развернуть";
             MainSelectbutton.Visible = false;
 
-           /* if (SettingsForm.Form1 == 1)
-            {
-                AusPanel.BackColor = Color.Red;
-            }
-            if (SettingsForm.Form1 == 2)
-            {
-                AusPanel.BackColor = Color.Orange;
-            }
-            if (SettingsForm.Form1 == 3)
-            {
-                AusPanel.BackColor = Color.Yellow;
-            }*/
         }
 
 
@@ -338,12 +319,13 @@ namespace ShopOfTanks
         {
             SettingsForm StsFrm = new SettingsForm();
             StsFrm.Show();
+            RedrawBtn.Visible = true;
         }
 
         private void RedrawBtn_Click(object sender, EventArgs e)
         {
-            #region цвета для AusPanel
             RedrawBtn.Visible = false;
+            #region цвета для AusPanel
             if (SettingsForm.Form1 == 1)
             {
                 AusPanel.BackColor = Color.Red;
@@ -385,6 +367,93 @@ namespace ShopOfTanks
                 AusPanel.BackColor = Color.Black;
             }
             #endregion
+
+            #region цвета для FiltrPanel
+            if (SettingsForm.Form2 == 1)
+            {
+                FiltrPanel.BackColor = Color.Red;
+            }
+            if (SettingsForm.Form2 == 2)
+            {
+                FiltrPanel.BackColor = Color.Orange;
+            }
+            if (SettingsForm.Form2 == 3)
+            {
+                FiltrPanel.BackColor = Color.Yellow;
+            }
+            if (SettingsForm.Form2 == 4)
+            {
+                FiltrPanel.BackColor = Color.Green;
+            }
+            if (SettingsForm.Form2 == 5)
+            {
+                FiltrPanel.BackColor = Color.LightBlue;
+            }
+            if (SettingsForm.Form2 == 6)
+            {
+                FiltrPanel.BackColor = Color.Blue;
+            }
+            if (SettingsForm.Form2 == 7)
+            {
+                FiltrPanel.BackColor = Color.Violet;
+            }
+            if (SettingsForm.Form2 == 8)
+            {
+                FiltrPanel.BackColor = Color.White;
+            }
+            if (SettingsForm.Form2 == 9)
+            {
+                FiltrPanel.BackColor = Color.Gray;
+            }
+            if (SettingsForm.Form2 == 10)
+            {
+                FiltrPanel.BackColor = Color.Black;
+            }
+            #endregion
+
+            #region цвета для MainPanel
+            if (SettingsForm.Form3 == 1)
+            {
+                MainPanel.BackColor = Color.Red;
+            }
+            if (SettingsForm.Form3 == 2)
+            {
+                MainPanel.BackColor = Color.Orange;
+            }
+            if (SettingsForm.Form3 == 3)
+            {
+                MainPanel.BackColor = Color.Yellow;
+            }
+            if (SettingsForm.Form3 == 4)
+            {
+                MainPanel.BackColor = Color.Green;
+            }
+            if (SettingsForm.Form3 == 5)
+            {
+                MainPanel.BackColor = Color.LightBlue;
+            }
+            if (SettingsForm.Form3 == 6)
+            {
+                MainPanel.BackColor = Color.Blue;
+            }
+            if (SettingsForm.Form3 == 7)
+            {
+                MainPanel.BackColor = Color.Violet;
+            }
+            if (SettingsForm.Form3 == 8)
+            {
+                MainPanel.BackColor = Color.White;
+            }
+            if (SettingsForm.Form3 == 9)
+            {
+                MainPanel.BackColor = Color.Gray;
+            }
+            if (SettingsForm.Form3 == 10)
+            {
+                MainPanel.BackColor = Color.Black;
+            }
+            #endregion
+
         }
     }
 }

@@ -15,6 +15,10 @@ namespace ShopOfTanks
         public static int Form1;
         public static int Form2;
         public static int Form3;
+        public static string WeightST;
+        public static string HightST;
+        public static int Weight;
+        public static int Hignt;
         public SettingsForm()
         {
             InitializeComponent();
@@ -154,9 +158,17 @@ namespace ShopOfTanks
             }
             #endregion
 
+            
+
             if (TBon1.Text!=" " && TBon2.Text!=" ")
             {
-                
+                TBon1.Text = WeightST;
+                TBon2.Text = HightST;
+
+                Weight = int.Parse(WeightST);
+                Hignt = int.Parse(HightST);
+
+                //крч это перевод из стринга в инт и это для селект форм
             }
         }
     }
