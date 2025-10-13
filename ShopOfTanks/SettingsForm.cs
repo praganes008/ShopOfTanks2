@@ -17,8 +17,8 @@ namespace ShopOfTanks
         public static int Form3;
         public static string WeightST;
         public static string HightST;
-        public static int Weight;
-        public static int Hignt;
+        public static int Weight = 1220;
+        public static int Hignt = 650;
         public SettingsForm()
         {
             InitializeComponent();
