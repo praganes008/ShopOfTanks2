@@ -366,6 +366,10 @@ namespace ShopOfTanks
             {
                 AusPanel.BackColor = Color.Black;
             }
+            if (SettingsForm.Form1 == 11)
+            {
+                AusPanel.BackColor = Color.FromArgb(0, 192, 0);
+            }
             #endregion
 
             #region цвета для FiltrPanel
@@ -409,6 +413,10 @@ namespace ShopOfTanks
             {
                 FiltrPanel.BackColor = Color.Black;
             }
+            if (SettingsForm.Form2 == 11)
+            {
+                FiltrPanel.BackColor = Color.FromArgb(255, 128, 0);
+            }
             #endregion
 
             #region цвета для MainPanel
@@ -451,6 +459,10 @@ namespace ShopOfTanks
             if (SettingsForm.Form3 == 10)
             {
                 MainPanel.BackColor = Color.Black;
+            }
+            if (SettingsForm.Form3 == 11)
+            {
+                MainPanel.BackColor = Color.Blue;
             }
             #endregion
 

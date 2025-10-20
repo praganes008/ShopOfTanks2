@@ -19,7 +19,7 @@ namespace ShopOfTanks
         {
             InitializeComponent();
 
-            if (SettingsForm.Weight != 1220)
+           /* if (SettingsForm.Weight != 1220)
             {
                 this.Width = SettingsForm.Weight;  
             }
@@ -27,7 +27,7 @@ namespace ShopOfTanks
             if (SettingsForm.Hignt != 650)
             {
                 this.Height = SettingsForm.Hignt;
-            }
+            }*/
 
             //Mailbtn.Visible = false;
             Text = "Избранное" + AusForm.username;

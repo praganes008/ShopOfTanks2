@@ -56,6 +56,7 @@
             // 
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Items.AddRange(new object[] {
+            "По умолчанию",
             "Красный",
             "Оранжевый",
             "Жёлтый",
@@ -102,6 +103,7 @@
             // 
             this.ComboBox2.FormattingEnabled = true;
             this.ComboBox2.Items.AddRange(new object[] {
+            "По умолчанию",
             "Красный",
             "Оранжевый",
             "Жёлтый",
@@ -121,6 +123,7 @@
             // 
             this.ComboBox3.FormattingEnabled = true;
             this.ComboBox3.Items.AddRange(new object[] {
+            "По умолчанию",
             "Красный",
             "Оранжевый",
             "Жёлтый",
@@ -139,7 +142,7 @@
             // Activate1Btn
             // 
             this.Activate1Btn.BackColor = System.Drawing.Color.Red;
-            this.Activate1Btn.Location = new System.Drawing.Point(1101, 12);
+            this.Activate1Btn.Location = new System.Drawing.Point(423, 117);
             this.Activate1Btn.Name = "Activate1Btn";
             this.Activate1Btn.Size = new System.Drawing.Size(169, 53);
             this.Activate1Btn.TabIndex = 7;
@@ -155,6 +158,7 @@
             this.label2.Size = new System.Drawing.Size(352, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "настройка размера окна избранного";
+            this.label2.Visible = false;
             // 
             // TBon1
             // 
@@ -162,6 +166,7 @@
             this.TBon1.Name = "TBon1";
             this.TBon1.Size = new System.Drawing.Size(100, 30);
             this.TBon1.TabIndex = 9;
+            this.TBon1.Visible = false;
             // 
             // TBon2
             // 
@@ -169,6 +174,7 @@
             this.TBon2.Name = "TBon2";
             this.TBon2.Size = new System.Drawing.Size(100, 30);
             this.TBon2.TabIndex = 10;
+            this.TBon2.Visible = false;
             // 
             // label3
             // 
@@ -178,6 +184,7 @@
             this.label3.Size = new System.Drawing.Size(33, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "на";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -187,13 +194,14 @@
             this.label4.Size = new System.Drawing.Size(99, 25);
             this.label4.TabIndex = 12;
             this.label4.Text = "пикселей";
+            this.label4.Visible = false;
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1282, 553);
+            this.ClientSize = new System.Drawing.Size(828, 417);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TBon2);

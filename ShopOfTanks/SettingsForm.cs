@@ -17,8 +17,8 @@ namespace ShopOfTanks
         public static int Form3;
         public static string WeightST;
         public static string HightST;
-        public static int Weight = 1220;
-        public static int Hignt = 650;
+        //public static int Weight = 1220;
+        //public static int Hignt = 650;
         public SettingsForm()
         {
             InitializeComponent();
@@ -68,6 +68,10 @@ namespace ShopOfTanks
             {
                 Form1 = 10;
             }
+            if (ComboBox1.Text == "По умолчанию")
+            {
+                Form1 = 11;
+            }
             #endregion
 
             #region цвета для FiltrPanel
@@ -111,6 +115,10 @@ namespace ShopOfTanks
             if (ComboBox2.Text == "Чёрный")
             {
                 Form2 = 10;
+            }
+            if (ComboBox2.Text == "По умолчанию")
+            {
+                Form2 = 11;
             }
             #endregion
 
@@ -156,11 +164,15 @@ namespace ShopOfTanks
             {
                 Form3 = 10;
             }
+            if (ComboBox3.Text == "По умолчанию")
+            {
+                Form3 = 11;
+            }
             #endregion
 
-            
 
-            if (TBon1.Text!=" " && TBon2.Text!=" ")
+
+            /*if (TBon1.Text!=" " && TBon2.Text!=" ")
             {
                 TBon1.Text = WeightST;
                 TBon2.Text = HightST;
@@ -169,7 +181,7 @@ namespace ShopOfTanks
                 Hignt = int.Parse(HightST);
 
                 //крч это перевод из стринга в инт и это для селект форм
-            }
+            }*/
         }
     }
 }
