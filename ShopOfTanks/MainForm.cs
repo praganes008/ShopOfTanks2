@@ -323,7 +323,7 @@ namespace ShopOfTanks
         }
 
         private void RedrawBtn_Click(object sender, EventArgs e)
-        {
+        { 
             RedrawBtn.Visible = false;
             #region цвета для AusPanel
             if (SettingsForm.Form1 == 1)
