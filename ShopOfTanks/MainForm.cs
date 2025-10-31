@@ -1,5 +1,6 @@
 ﻿using ShopOfTanks.Properties;
 using System;
+using System.Data.Common;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ShopOfTanks
 {
@@ -44,8 +46,30 @@ namespace ShopOfTanks
 
     }
 
+
     public partial class MainForm : Form
     {
+        public const string CONNECTION_STRING =
+        "SslMode=none;Server=localhost;Database=shotbase;port=3306;Uid=root;charset=utf8";//строка подключения
+
+        public static MySqlConnection CONN;
+
+        public static List<string> mySelect(string cmdText)
+        {
+            List<string> list = new List<string>();
+            MySqlCommand command = new MySqlCommand(cmdText, CONN);
+            DbDataReader dr = command.ExecuteReader();
+            while (dr.Read())
+            {
+                for(int i=0; i<dr.FieldCount; i++)
+                {
+                    list.Add(dr.GetValue(i).ToString());
+                }
+            }
+            dr.Close();
+            return list;
+
+        }
 
         public static List<Product> products = new List<Product>();
 
@@ -54,10 +78,13 @@ namespace ShopOfTanks
          
             InitializeComponent();
 
+            List<string> tanks_list = mySelect("SELECT id, name, country, massa, type, price FROM tanks");
+
             NameLabel.Visible = false;
             FiltrPanel.Height = HideButton.Height;
             HideButton.Text = "развернуть";
             MainSelectbutton.Visible = false;
+
 
         }
 
@@ -322,7 +349,7 @@ namespace ShopOfTanks
             RedrawBtn.Visible = true;
         }
 
-        private void RedrawBtn_Click(object sender, EventArgs e)
+        private void RedrawBtn_Click(object sender, EventArgs e)//настройки цвета форм, кнопка "обновить"
         { 
             RedrawBtn.Visible = false;
             #region цвета для AusPanel

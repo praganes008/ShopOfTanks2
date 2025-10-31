@@ -109,7 +109,10 @@
             "США",
             "Польша",
             "Шведция",
-            "Великобритания"});
+            "Великобритания",
+            "Япония",
+            "Румыния",
+            "Чехославакия"});
             this.CountryComboBox.Location = new System.Drawing.Point(18, 225);
             this.CountryComboBox.Name = "CountryComboBox";
             this.CountryComboBox.Size = new System.Drawing.Size(267, 33);
