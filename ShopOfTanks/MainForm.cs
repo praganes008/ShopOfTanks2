@@ -46,30 +46,8 @@ namespace ShopOfTanks
 
     }
 
-
     public partial class MainForm : Form
     {
-        public const string CONNECTION_STRING =
-        "SslMode=none;Server=localhost;Database=shotbase;port=3306;Uid=root;charset=utf8";//строка подключения
-
-        public static MySqlConnection CONN;
-
-        public static List<string> mySelect(string cmdText)
-        {
-            List<string> list = new List<string>();
-            MySqlCommand command = new MySqlCommand(cmdText, CONN);
-            DbDataReader dr = command.ExecuteReader();
-            while (dr.Read())
-            {
-                for(int i=0; i<dr.FieldCount; i++)
-                {
-                    list.Add(dr.GetValue(i).ToString());
-                }
-            }
-            dr.Close();
-            return list;
-
-        }
 
         public static List<Product> products = new List<Product>();
 
@@ -78,16 +56,31 @@ namespace ShopOfTanks
          
             InitializeComponent();
 
-            List<string> tanks_list = mySelect("SELECT id, name, country, massa, type, price FROM tanks");
-
             NameLabel.Visible = false;
             FiltrPanel.Height = HideButton.Height;
             HideButton.Text = "развернуть";
             MainSelectbutton.Visible = false;
 
-
+            ReRead_SQL();
         }
 
+        void ReRead_SQL()
+        {
+            List<string> tanks_list = mySelect("SELECT id, name, country, massa, type, price FROM tanks");
+
+            products.Clear();
+
+            for (int i=0; i<tanks_list.Count; i+=6)
+            {                                                   
+                Product product = new Product(tanks_list[i + 1],
+                                              tanks_list[i + 2],
+                                              Convert.ToInt32(tanks_list[i + 3]),
+                                              tanks_list[i + 4],
+                                              Convert.ToInt32(tanks_list[i + 5]));
+                products.Add(product);
+            }
+            MainPanel.Controls.Clear();
+        }
 
         private void PicProduct_Click(object sender, EventArgs e)//клик на картинку
         {
@@ -139,8 +132,8 @@ namespace ShopOfTanks
 
         private void MainForm_Load(object sender, EventArgs e)//загрузка MainForm
         {
-
-                products.Clear();
+            //раньше функция ReRead была тут
+          /*      products.Clear();
                 string[] strs = System.IO.File.ReadAllLines("../../Pictures/Products.txt");
 
                 foreach (string str in strs)
@@ -153,7 +146,7 @@ namespace ShopOfTanks
                                                   Convert.ToInt32(parts[4]));
                     products.Add(product);
                 }
-            MainPanel.Controls.Clear();
+            MainPanel.Controls.Clear();*/
             
 
             int x = 30;

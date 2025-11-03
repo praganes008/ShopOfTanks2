@@ -18,12 +18,12 @@ namespace ShopOfTanks
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MainForm.CONN = new MySqlConnection(MainForm.CONNECTION_STRING);
-            MainForm.CONN.Open();
+            SQL_class.CONN = new MySqlConnection(SQL_class.CONNECTION_STRING);
+            SQL_class.CONN.Open();
 
             Application.Run(new MainForm());
 
-            MainForm.CONN.Close();
+            SQL_class.CONN.Close();
         }
     }
 }

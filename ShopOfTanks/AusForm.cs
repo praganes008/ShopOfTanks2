@@ -22,17 +22,17 @@ namespace ShopOfTanks
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] strs = System.IO.File.ReadAllLines("users.txt");
-            foreach(string str in strs)
+            List<string> users_list = SQL_class.mySelect("SELECT id, name, Famil, login, Passvord, IsAdmin, Mail FROM users");
+
+            for(int i = 0; i < users_list.Count; i += 7)
             {
-                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                if(LoginTB.Text == parts[2] && PasswordTB.Text == parts[3])
+                if(LoginTB.Text == users_list[i + 3] && PasswordTB.Text == users_list[i + 4])
                 {
-                    username = parts[0] + " " + parts[1];
-                    isAdmin = (parts[4]=="1");
+                    username = users_list[i + 1] + " " + users_list[i + 2];
+                    isAdmin = (users_list[i + 5]=="1");
                     try                                                                                         //исключение, если не выполнено то выполняется catch
                     {
-                       email = parts[5];
+                       email = users_list[i + 6];
                     }
                     catch(Exception) 
                     { }
