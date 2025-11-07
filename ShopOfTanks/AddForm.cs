@@ -31,13 +31,9 @@ namespace ShopOfTanks
                 MessageBox.Show("Все поля обязательны к заполнению!");
                 return;
             }
-
-            System.IO.File.AppendAllText("../../Pictures/Products.txt",NameTB.Text + ", " +
-                                                                       CountryComboBox.Text + ", " +
-                                                                       MassaTB.Text + ", " +
-                                                                       TypeComboBox.Text + ", " +
-                                                                       PriceTB.Text +
-                                                                       Environment.NewLine);
+            //запись параметров объекта в SQL таблицу
+            SQL_class.myUpdate("INSERT INTO tanks (name, country, massa, type, price, opis) VALUES ('" + NameTB.Text + "', '" + CountryComboBox.Text + "', '" + MassaTB.Text + "', '" + TypeComboBox.Text + "', '" + PriceTB.Text + "', '"+ OpisTB.Text + "')");
+            
            
             if (FileName != "")
             {
@@ -45,7 +41,7 @@ namespace ShopOfTanks
 
             }
 
-            System.IO.File.AppendAllText("../../Pictures/" + NameTB.Text + ".txt", OpisTB.Text);
+            //System.IO.File.AppendAllText("../../Pictures/" + NameTB.Text + ".txt", OpisTB.Text);
 
             if (NameTB.Text != "" && CountryComboBox.Text != "" && MassaTB.Text != "" && TypeComboBox.Text != "" && PriceTB.Text != "")
             {

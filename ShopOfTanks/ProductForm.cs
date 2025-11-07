@@ -38,7 +38,8 @@ namespace ShopOfTanks
 
             try
                 {
-                OpistextBox.Text = System.IO.File.ReadAllText("../../Pictures/" + product.name + ".txt");
+                OpistextBox.Text = SQL_class.mySelect("SELECT opis FROM tanks WHERE name '"+  +"'")[0]
+                //OpistextBox.Text = System.IO.File.ReadAllText("../../Pictures/" + product.name + ".txt");
                 }
             catch(Exception) { }
         }

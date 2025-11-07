@@ -66,7 +66,7 @@ namespace ShopOfTanks
 
         void ReRead_SQL()
         {
-            List<string> tanks_list = mySelect("SELECT id, name, country, massa, type, price FROM tanks");
+            List<string> tanks_list = SQL_class.mySelect("SELECT id, name, country, massa, type, price FROM tanks");
 
             products.Clear();
 

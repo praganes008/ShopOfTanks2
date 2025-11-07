@@ -26,13 +26,8 @@ namespace ShopOfTanks
                 if (textBoxName.Text != "" && textBoxFamil.Text != "" && textBoxLogin.Text != "" && textBoxPassvord.Text != "" && textBoxResPasvord.Text != ""
                     && textBoxPassvord.TextLength > minLength)
                 {
-                    System.IO.File.AppendAllText("users.txt",
-                                                textBoxName.Text + ", " +
-                                                textBoxFamil.Text + ", " +
-                                                textBoxLogin.Text + ", " +
-                                                textBoxPassvord.Text + ", 0, " +
-                                                MailTB.Text +
-                                                Environment.NewLine);
+                    //обращение к таблице и занесение в неё нового пользователя
+                    SQL_class.myUpdate("INSERT INTO users (name, Famil, login, Passvord, IsAdmin, Mail) VALUES ('" + textBoxName.Text + "', '"+ textBoxFamil.Text + "', '"+ textBoxLogin.Text + "', '"+ textBoxLogin.Text + "', '"+ 0 +"', '"+ MailTB.Text + "')");
                     MessageBox.Show("Регистрация прошла успешно!");
                     Close();
                 }

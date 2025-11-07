@@ -13,9 +13,10 @@ namespace ShopOfTanks
         //функция подключения к Базе Данных
         public const string CONNECTION_STRING =
         "SslMode=none;Server=localhost;Database=shotbase;port=3306;Uid=root;charset=utf8";//строка подключения
-
+        //Подключение к БД
         public static MySqlConnection CONN;
 
+        //Функция SELECT-запроса
         public static List<string> mySelect(string cmdText)
         {
             List<string> list = new List<string>();
@@ -32,7 +33,13 @@ namespace ShopOfTanks
             return list;
         }
 
-
+        //Функция INSERT-запроса
+        public static void myUpdate(string cmdText)
+        {
+            MySqlCommand command = new MySqlCommand(cmdText, CONN);
+            DbDataReader dr = command.ExecuteReader();
+            dr.Close();
+        }
 
     }
 
