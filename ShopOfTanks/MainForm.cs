@@ -34,7 +34,7 @@ namespace ShopOfTanks
             picture = new PictureBox();
             try
             {
-                picture.Load("../../Pictures/" + name + ".jpeg");
+                picture.Load("http://localhost/ShopOfTanks/image/" + name + ".jpeg");
             }
             catch (Exception) { }
 
