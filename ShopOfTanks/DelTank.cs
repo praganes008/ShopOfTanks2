@@ -31,30 +31,16 @@ namespace ShopOfTanks
             var result = MessageBox.Show("Вы действительно хотите удалить данный танк?", "удаление объекта", MessageBoxButtons.YesNo);
             if(result == DialogResult.Yes)
             {
-                string name = "";
-                System.IO.File.Delete("../../Pictures/Products.txt");
-
                 for (int i = 0; i < MainForm.products.Count; i++)
                 {
                     if (DelTextBox.Text == MainForm.products[i].name)
                     {
-
-                    }
-                    else
-                    {
-                        System.IO.File.AppendAllText("../../Pictures/Products.txt", MainForm.products[i].name + ", " +
-                                                                           MainForm.products[i].country + ", " +
-                                                                           MainForm.products[i].massa + ", " +
-                                                                           MainForm.products[i].type + ", " +
-                                                                           MainForm.products[i].price +
-                                                                           Environment.NewLine);
+                        SQL_class.myUpdate("DELETE FROM tanks WHERE name = '"+ MainForm.products[i].name + "' ");
+                        MessageBox.Show("Танк успесшно удалён");
+                        Close();
                     }
                 }
-                MessageBox.Show("Танк успесшно удалён");
-                Close();
             }
-
-           
         }
     }
 }
