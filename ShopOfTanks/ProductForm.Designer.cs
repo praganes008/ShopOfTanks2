@@ -38,6 +38,7 @@
             this.OpistextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.AddSelectedButton = new System.Windows.Forms.Button();
+            this.PartBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,11 +134,22 @@
             this.AddSelectedButton.UseVisualStyleBackColor = false;
             this.AddSelectedButton.Click += new System.EventHandler(this.AddSelectedButton_Click);
             // 
+            // PartBtn
+            // 
+            this.PartBtn.Location = new System.Drawing.Point(300, 13);
+            this.PartBtn.Name = "PartBtn";
+            this.PartBtn.Size = new System.Drawing.Size(281, 44);
+            this.PartBtn.TabIndex = 10;
+            this.PartBtn.Text = "запчасти";
+            this.PartBtn.UseVisualStyleBackColor = true;
+            this.PartBtn.Click += new System.EventHandler(this.PartBtn_Click);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 703);
+            this.Controls.Add(this.PartBtn);
             this.Controls.Add(this.AddSelectedButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OpistextBox);
@@ -171,5 +183,6 @@
         private System.Windows.Forms.TextBox OpistextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AddSelectedButton;
+        private System.Windows.Forms.Button PartBtn;
     }
 }

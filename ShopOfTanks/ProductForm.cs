@@ -58,5 +58,10 @@ namespace ShopOfTanks
             }
         }
 
+        private void PartBtn_Click(object sender, EventArgs e)
+        {
+            Parts Prt = new Parts();
+            Prt.ShowDialog();
+        }
     }
 }

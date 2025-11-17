@@ -41,8 +41,6 @@ namespace ShopOfTanks
 
             }
 
-            //System.IO.File.AppendAllText("../../Pictures/" + NameTB.Text + ".txt", OpisTB.Text);
-
             if (NameTB.Text != "" && CountryComboBox.Text != "" && MassaTB.Text != "" && TypeComboBox.Text != "" && PriceTB.Text != "")
             {
                 MessageBox.Show("Товар успешно добавлен!");

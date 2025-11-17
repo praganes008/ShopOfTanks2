@@ -32,6 +32,7 @@ namespace ShopOfTanks
             type = _type;
             price = _price;
             picture = new PictureBox();
+
             try
             {
                 picture.Load("http://localhost/ShopOfTanks/image/" + name + ".jpeg");
