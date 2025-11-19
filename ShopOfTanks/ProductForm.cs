@@ -14,6 +14,7 @@ namespace ShopOfTanks
     public partial class ProductForm : Form
     {
         Product product;
+        string tank_id;
         public ProductForm(Product _product)
         {
             InitializeComponent();
@@ -36,13 +37,11 @@ namespace ShopOfTanks
             PriceLabel.Text = "Цена танка: " + product.price;
             CategoryLabel.Text = "Тип танка: " + product.type;
 
-            try
-                {
 
-                OpistextBox.Text = SQL_class.mySelect("SELECT opis FROM tanks WHERE name '" + product.name +"'")[0];
+            List<string> tank = SQL_class.mySelect("SELECT id, opis FROM tanks WHERE name = '" + product.name +"'");
+            OpistextBox.Text = tank[1];
+            tank_id = tank[0];
 
-                }
-            catch(Exception) { }
         }
 
         private void AddSelectedButton_Click(object sender, EventArgs e)
@@ -60,7 +59,7 @@ namespace ShopOfTanks
 
         private void PartBtn_Click(object sender, EventArgs e)
         {
-            Parts Prt = new Parts();
+            Parts Prt = new Parts(tank_id);
             Prt.ShowDialog();
         }
     }

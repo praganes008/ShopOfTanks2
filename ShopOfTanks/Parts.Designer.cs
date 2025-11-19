@@ -35,7 +35,7 @@
             // NameTankslbl
             // 
             this.NameTankslbl.AutoSize = true;
-            this.NameTankslbl.Location = new System.Drawing.Point(13, 13);
+            this.NameTankslbl.Location = new System.Drawing.Point(10, 10);
             this.NameTankslbl.Name = "NameTankslbl";
             this.NameTankslbl.Size = new System.Drawing.Size(64, 25);
             this.NameTankslbl.TabIndex = 0;
@@ -44,11 +44,11 @@
             // PartLabel
             // 
             this.PartLabel.AutoSize = true;
-            this.PartLabel.Location = new System.Drawing.Point(13, 61);
+            this.PartLabel.Location = new System.Drawing.Point(10, 60);
             this.PartLabel.Name = "PartLabel";
-            this.PartLabel.Size = new System.Drawing.Size(64, 25);
+            this.PartLabel.Size = new System.Drawing.Size(175, 25);
             this.PartLabel.TabIndex = 1;
-            this.PartLabel.Text = "label1";
+            this.PartLabel.Text = "комплектующие:";
             // 
             // Parts
             // 
