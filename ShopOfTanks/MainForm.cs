@@ -133,7 +133,7 @@ namespace ShopOfTanks
 
         private void MainForm_Load(object sender, EventArgs e)//загрузка MainForm
         {
-            //раньше функция ReRead была тут
+                                                    //раньше функция ReRead была тут
           /*      products.Clear();
                 string[] strs = System.IO.File.ReadAllLines("../../Pictures/Products.txt");
 
