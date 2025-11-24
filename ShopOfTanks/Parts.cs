@@ -16,23 +16,23 @@ namespace ShopOfTanks
         {
             InitializeComponent();
 
-            List<string> parts = SQL_class.mySelect("SELECT id, name, price FROM parts WHERE tank_id = '"+ tank_id + "'");
+            List<string> parts = SQL_class.mySelect("SELECT id, name, price, adres FROM parts WHERE tank_id = '"+ tank_id + "'");
             NameTankslbl.Text = SQL_class.mySelect("SELECT name FROM tanks WHERE id = '"+ tank_id + "'")[0];
 
             if (parts.Count>0)
             {
-                int x = 120;
+                int x = 370;
                 int y = 85;
-                for (int i = 0; i < parts.Count; i += 3)
+                for (int i = 0; i < parts.Count; i += 4)
                 {
                     PictureBox pic = new PictureBox();
                     pic.SizeMode = PictureBoxSizeMode.Zoom;
-                    pic.Location = new Point(x, y);
+                    pic.Location = new Point(x, y-10);
                     pic.Size = new Size(50, 50);
                     pic.BorderStyle = BorderStyle.Fixed3D;
                     try
                         {
-                        pic.Load();
+                        pic.Load("http://localhost/ShopOfTanks/image/" + parts[i+3]);
                         }
                     catch (Exception) { }
                     Controls.Add(pic);
@@ -44,7 +44,7 @@ namespace ShopOfTanks
                     lbl.Text = parts[i+1] + " " + parts[i+2] + " руб.";
                     Controls.Add(lbl);
 
-                    y += 25;
+                    y += 60;
                 }
             }
         }

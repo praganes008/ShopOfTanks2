@@ -44,7 +44,7 @@
             // PartLabel
             // 
             this.PartLabel.AutoSize = true;
-            this.PartLabel.Location = new System.Drawing.Point(10, 60);
+            this.PartLabel.Location = new System.Drawing.Point(10, 35);
             this.PartLabel.Name = "PartLabel";
             this.PartLabel.Size = new System.Drawing.Size(175, 25);
             this.PartLabel.TabIndex = 1;
