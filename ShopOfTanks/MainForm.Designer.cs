@@ -55,6 +55,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddToolContMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -72,7 +73,7 @@
             this.AusPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AusPanel.Location = new System.Drawing.Point(0, 0);
             this.AusPanel.Name = "AusPanel";
-            this.AusPanel.Size = new System.Drawing.Size(1446, 67);
+            this.AusPanel.Size = new System.Drawing.Size(1456, 67);
             this.AusPanel.TabIndex = 0;
             // 
             // FeedBackButton
@@ -154,7 +155,7 @@
             this.FiltrPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FiltrPanel.Location = new System.Drawing.Point(0, 67);
             this.FiltrPanel.Name = "FiltrPanel";
-            this.FiltrPanel.Size = new System.Drawing.Size(1446, 131);
+            this.FiltrPanel.Size = new System.Drawing.Size(1456, 131);
             this.FiltrPanel.TabIndex = 1;
             // 
             // RedrawBtn
@@ -305,7 +306,7 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 198);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1446, 543);
+            this.MainPanel.Size = new System.Drawing.Size(1456, 543);
             this.MainPanel.TabIndex = 2;
             this.MainPanel.Resize += new System.EventHandler(this.MainPanel_Resize);
             // 
@@ -314,30 +315,38 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddTankContextMenu,
-            this.DeleteTankToolStripMenuItem});
+            this.DeleteTankToolStripMenuItem,
+            this.AddToolContMenuStrip});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 76);
             // 
             // AddTankContextMenu
             // 
             this.AddTankContextMenu.Name = "AddTankContextMenu";
-            this.AddTankContextMenu.Size = new System.Drawing.Size(187, 24);
-            this.AddTankContextMenu.Text = "добавить товар";
+            this.AddTankContextMenu.Size = new System.Drawing.Size(210, 24);
+            this.AddTankContextMenu.Text = "Добавить товар";
             this.AddTankContextMenu.Click += new System.EventHandler(this.AddTankContextMenu_Click);
             // 
             // DeleteTankToolStripMenuItem
             // 
             this.DeleteTankToolStripMenuItem.Name = "DeleteTankToolStripMenuItem";
-            this.DeleteTankToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.DeleteTankToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.DeleteTankToolStripMenuItem.Text = "Удалить танк";
             this.DeleteTankToolStripMenuItem.Click += new System.EventHandler(this.DeleteTankToolStripMenuItem_Click);
+            // 
+            // AddToolContMenuStrip
+            // 
+            this.AddToolContMenuStrip.Name = "AddToolContMenuStrip";
+            this.AddToolContMenuStrip.Size = new System.Drawing.Size(210, 24);
+            this.AddToolContMenuStrip.Text = "Добавить запчасть";
+            this.AddToolContMenuStrip.Click += new System.EventHandler(this.AddToolContMenuStrip_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1446, 741);
+            this.ClientSize = new System.Drawing.Size(1456, 741);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.FiltrPanel);
@@ -387,6 +396,7 @@
         private System.Windows.Forms.Button FeedBackButton;
         private System.Windows.Forms.Button SetBtn;
         private System.Windows.Forms.Button RedrawBtn;
+        private System.Windows.Forms.ToolStripMenuItem AddToolContMenuStrip;
     }
 }
 

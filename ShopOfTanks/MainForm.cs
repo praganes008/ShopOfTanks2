@@ -133,23 +133,7 @@ namespace ShopOfTanks
 
         private void MainForm_Load(object sender, EventArgs e)//загрузка MainForm
         {
-                                                    //раньше функция ReRead была тут
-          /*      products.Clear();
-                string[] strs = System.IO.File.ReadAllLines("../../Pictures/Products.txt");
-
-                foreach (string str in strs)
-                {
-                    string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);                                                   //сринг, т.к у нас разделитель из 2х символов, тюе уже строка
-                    Product product = new Product(parts[0],
-                                                  parts[1],
-                                                  Convert.ToInt32(parts[2]),
-                                                  parts[3],
-                                                  Convert.ToInt32(parts[4]));
-                    products.Add(product);
-                }
-            MainPanel.Controls.Clear();*/
-            
-
+               
             int x = 30;
             int y = 25;
 
@@ -487,6 +471,20 @@ namespace ShopOfTanks
             }
             #endregion
 
+        }
+
+        private void AddToolContMenuStrip_Click(object sender, EventArgs e)//добавить запчасть клик
+        {
+            if (AusForm.isAdmin)
+            {
+                AddToolForm AddTForm = new AddToolForm();
+                AddTForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("добавлять запчасти могут только админы!");
+            }
+            MainForm_Load(null, null);
         }
     }
 }
