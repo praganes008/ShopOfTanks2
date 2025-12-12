@@ -33,7 +33,6 @@ namespace ShopOfTanks
                 FileName = System.IO.Path.GetFileName(openFileDialog1.FileName);
             }
         }
-
         private void AddToolBtn_Click(object sender, EventArgs e)
         {
             int a;
@@ -59,6 +58,12 @@ namespace ShopOfTanks
                 MessageBox.Show("Запчасть успешно добавлена!");
                 Close();
             }
+        }
+
+        private void HelpBtn_Click(object sender, EventArgs e)
+        {
+            HelpAddToolForm Add2Form = new HelpAddToolForm();
+            Add2Form.ShowDialog();
         }
     }
 }

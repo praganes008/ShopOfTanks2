@@ -46,6 +46,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.HelpBtn = new System.Windows.Forms.Button();
             this.InfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox)).BeginInit();
             this.ButtonPanel.SuspendLayout();
@@ -54,6 +55,7 @@
             // InfoPanel
             // 
             this.InfoPanel.BackColor = System.Drawing.Color.MediumBlue;
+            this.InfoPanel.Controls.Add(this.HelpBtn);
             this.InfoPanel.Controls.Add(this.AddToolBtn);
             this.InfoPanel.Controls.Add(this.label7);
             this.InfoPanel.Controls.Add(this.PriceTB);
@@ -226,6 +228,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // HelpBtn
+            // 
+            this.HelpBtn.BackColor = System.Drawing.Color.Red;
+            this.HelpBtn.Location = new System.Drawing.Point(1142, 0);
+            this.HelpBtn.Name = "HelpBtn";
+            this.HelpBtn.Size = new System.Drawing.Size(39, 38);
+            this.HelpBtn.TabIndex = 13;
+            this.HelpBtn.Text = "?";
+            this.HelpBtn.UseVisualStyleBackColor = false;
+            this.HelpBtn.Click += new System.EventHandler(this.HelpBtn_Click);
+            // 
             // AddToolForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -266,5 +279,6 @@
         private System.Windows.Forms.TextBox PriceTB;
         private System.Windows.Forms.Button AddToolBtn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button HelpBtn;
     }
 }
