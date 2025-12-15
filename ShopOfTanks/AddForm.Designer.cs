@@ -44,6 +44,7 @@
             this.LoadPicButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.OpisTB = new System.Windows.Forms.TextBox();
+            this.HelpBtn3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,11 +199,23 @@
             this.OpisTB.Size = new System.Drawing.Size(407, 514);
             this.OpisTB.TabIndex = 15;
             // 
+            // HelpBtn3
+            // 
+            this.HelpBtn3.BackColor = System.Drawing.Color.Red;
+            this.HelpBtn3.Location = new System.Drawing.Point(1222, 571);
+            this.HelpBtn3.Name = "HelpBtn3";
+            this.HelpBtn3.Size = new System.Drawing.Size(40, 40);
+            this.HelpBtn3.TabIndex = 16;
+            this.HelpBtn3.Text = "?";
+            this.HelpBtn3.UseVisualStyleBackColor = false;
+            this.HelpBtn3.Click += new System.EventHandler(this.HelpBtn3_Click);
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 612);
+            this.Controls.Add(this.HelpBtn3);
             this.Controls.Add(this.OpisTB);
             this.Controls.Add(this.LoadPicButton);
             this.Controls.Add(this.pictureBox1);
@@ -246,5 +259,6 @@
         private System.Windows.Forms.Button LoadPicButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox OpisTB;
+        private System.Windows.Forms.Button HelpBtn3;
     }
 }

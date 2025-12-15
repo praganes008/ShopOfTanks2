@@ -16,6 +16,7 @@ namespace ShopOfTanks
         {
             InitializeComponent();
 
+
             List<string> tanks_list = SQL_class.mySelect("SELECT id, name From tanks");
             for (int i=0; i<tanks_list.Count; i+=2)
             {
@@ -59,10 +60,16 @@ namespace ShopOfTanks
                 Close();
             }
         }
-
         private void HelpBtn_Click(object sender, EventArgs e)
         {
-            HelpAddToolForm Add2Form = new HelpAddToolForm();
+            Button button = (Button)sender;
+            HelpAddToolForm Add2Form = new HelpAddToolForm(button.Name.ToString());
+            Add2Form.ShowDialog();
+        }
+        private void HelpBtn2_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            HelpAddToolForm Add2Form = new HelpAddToolForm(button.Name.ToString());
             Add2Form.ShowDialog();
         }
     }

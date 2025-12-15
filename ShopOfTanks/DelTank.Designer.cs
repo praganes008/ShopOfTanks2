@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DelTextBox = new System.Windows.Forms.TextBox();
             this.DelButton = new System.Windows.Forms.Button();
+            this.HelpBtn4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,11 +83,23 @@
             this.DelButton.UseVisualStyleBackColor = true;
             this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
+            // HelpBtn4
+            // 
+            this.HelpBtn4.BackColor = System.Drawing.Color.Red;
+            this.HelpBtn4.Location = new System.Drawing.Point(593, -2);
+            this.HelpBtn4.Name = "HelpBtn4";
+            this.HelpBtn4.Size = new System.Drawing.Size(40, 40);
+            this.HelpBtn4.TabIndex = 5;
+            this.HelpBtn4.Text = "?";
+            this.HelpBtn4.UseVisualStyleBackColor = false;
+            this.HelpBtn4.Click += new System.EventHandler(this.HelpBtn4_Click);
+            // 
             // DelTank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 250);
+            this.Controls.Add(this.HelpBtn4);
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.DelTextBox);
             this.Controls.Add(this.label2);
@@ -108,5 +121,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox DelTextBox;
         private System.Windows.Forms.Button DelButton;
+        private System.Windows.Forms.Button HelpBtn4;
     }
 }

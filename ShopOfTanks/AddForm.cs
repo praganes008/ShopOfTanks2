@@ -57,5 +57,12 @@ namespace ShopOfTanks
                 pictureBox1.Load(FileName);
             }
         }
+
+        private void HelpBtn3_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            HelpAddToolForm Add2Form = new HelpAddToolForm(button.Name.ToString());
+            Add2Form.ShowDialog();
+        }
     }
 }

@@ -18,11 +18,19 @@ namespace ShopOfTanks
 
             if(nameButton == "HelpBtn")
             {
-                HelpAddToolTB.Text = System.IO.File.ReadAllText("HelpAddToolFile.txt");
+                HelpAddToolTB.Text = System.IO.File.ReadAllText("HA_ToolFile.txt");
             }
-            else if (nameButton == "HelpBtn")
+            else if (nameButton == "HelpBtn2")
             {
-                HelpAddToolTB.Text = System.IO.File.ReadAllText("HelpDelToolFile.txt");
+                HelpAddToolTB.Text = System.IO.File.ReadAllText("HD_ToolFile.txt");
+            }
+            else if (nameButton == "HelpBtn3")
+            {
+                HelpAddToolTB.Text = System.IO.File.ReadAllText("HA_ProductFile.txt");
+            }
+            else if (nameButton == "HelpBtn4")
+            {
+                HelpAddToolTB.Text = System.IO.File.ReadAllText("HD_ProductFile.txt");
             }
         }
 
