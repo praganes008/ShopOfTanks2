@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ShopOfTanks
 {
     public partial class AddToolForm : Form
     {
-        public AddToolForm()
+        public AddToolForm(string name)
         {
             InitializeComponent();
 
+            for (int i = 0; i < .Count; i++)
+            {
+                DelToolCB.Items.Add(.name);
+            }
 
             List<string> tanks_list = SQL_class.mySelect("SELECT id, name From tanks");
             for (int i=0; i<tanks_list.Count; i+=2)
@@ -71,6 +76,21 @@ namespace ShopOfTanks
             Button button = (Button)sender;
             HelpAddToolForm Add2Form = new HelpAddToolForm(button.Name.ToString());
             Add2Form.ShowDialog();
+        }
+        private void DelComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = DelToolCB.Text;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < .Count; i++)
+            {
+                if (textBox1.Text == name[i])
+                {
+                    SQL_class.myUpdate("DELETE FROM parts WHERE name = '" +  + "' ");
+                    Close();
+                }
+            }
         }
     }
 }

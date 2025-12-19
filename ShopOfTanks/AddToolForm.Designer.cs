@@ -44,12 +44,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PicBox = new System.Windows.Forms.PictureBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.DelToolCB = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.HelpBtn2 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.HelpBtn2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.DelToolCB = new System.Windows.Forms.ComboBox();
             this.InfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBox)).BeginInit();
             this.ButtonPanel.SuspendLayout();
@@ -221,6 +221,32 @@
             this.ButtonPanel.Size = new System.Drawing.Size(1181, 137);
             this.ButtonPanel.TabIndex = 1;
             // 
+            // DelToolCB
+            // 
+            this.DelToolCB.FormattingEnabled = true;
+            this.DelToolCB.Location = new System.Drawing.Point(9, 70);
+            this.DelToolCB.Name = "DelToolCB";
+            this.DelToolCB.Size = new System.Drawing.Size(298, 33);
+            this.DelToolCB.TabIndex = 16;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(361, 70);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(372, 30);
+            this.textBox1.TabIndex = 15;
+            // 
+            // HelpBtn2
+            // 
+            this.HelpBtn2.BackColor = System.Drawing.Color.Red;
+            this.HelpBtn2.Location = new System.Drawing.Point(1142, 0);
+            this.HelpBtn2.Name = "HelpBtn2";
+            this.HelpBtn2.Size = new System.Drawing.Size(39, 38);
+            this.HelpBtn2.TabIndex = 14;
+            this.HelpBtn2.Text = "?";
+            this.HelpBtn2.UseVisualStyleBackColor = false;
+            this.HelpBtn2.Click += new System.EventHandler(this.HelpBtn2_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
@@ -230,6 +256,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Удалить запчасть";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -244,32 +271,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // HelpBtn2
-            // 
-            this.HelpBtn2.BackColor = System.Drawing.Color.Red;
-            this.HelpBtn2.Location = new System.Drawing.Point(1142, 0);
-            this.HelpBtn2.Name = "HelpBtn2";
-            this.HelpBtn2.Size = new System.Drawing.Size(39, 38);
-            this.HelpBtn2.TabIndex = 14;
-            this.HelpBtn2.Text = "?";
-            this.HelpBtn2.UseVisualStyleBackColor = false;
-            this.HelpBtn2.Click += new System.EventHandler(this.HelpBtn2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(361, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 30);
-            this.textBox1.TabIndex = 15;
-            // 
-            // DelToolCB
-            // 
-            this.DelToolCB.FormattingEnabled = true;
-            this.DelToolCB.Location = new System.Drawing.Point(9, 70);
-            this.DelToolCB.Name = "DelToolCB";
-            this.DelToolCB.Size = new System.Drawing.Size(298, 33);
-            this.DelToolCB.TabIndex = 16;
             // 
             // AddToolForm
             // 

@@ -23,7 +23,7 @@ namespace ShopOfTanks
             {
                 int x = 370;
                 int y = 85;
-                for (int i = 0; i < parts.Count; i += 4)
+                for (int i = 0; i < 2; i += 4)
                 {
                     #region Картинка
                     PictureBox pic = new PictureBox();
