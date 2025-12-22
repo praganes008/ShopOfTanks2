@@ -56,6 +56,7 @@
             this.AddTankContextMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolContMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.InfoBD = new System.Windows.Forms.ToolStripMenuItem();
             this.AusPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -316,9 +317,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddTankContextMenu,
             this.DeleteTankToolStripMenuItem,
-            this.AddToolContMenuStrip});
+            this.AddToolContMenuStrip,
+            this.InfoBD});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 128);
             // 
             // AddTankContextMenu
             // 
@@ -340,6 +342,13 @@
             this.AddToolContMenuStrip.Size = new System.Drawing.Size(210, 24);
             this.AddToolContMenuStrip.Text = "Добавить запчасть";
             this.AddToolContMenuStrip.Click += new System.EventHandler(this.AddToolContMenuStrip_Click);
+            // 
+            // InfoBD
+            // 
+            this.InfoBD.Name = "InfoBD";
+            this.InfoBD.Size = new System.Drawing.Size(210, 24);
+            this.InfoBD.Text = "Таблица БД";
+            this.InfoBD.Click += new System.EventHandler(this.таблицаБДToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -397,6 +406,7 @@
         private System.Windows.Forms.Button SetBtn;
         private System.Windows.Forms.Button RedrawBtn;
         private System.Windows.Forms.ToolStripMenuItem AddToolContMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem InfoBD;
     }
 }
 

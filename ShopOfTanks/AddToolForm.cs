@@ -13,20 +13,21 @@ namespace ShopOfTanks
 {
     public partial class AddToolForm : Form
     {
-        public AddToolForm(string name)
+        public AddToolForm()
         {
             InitializeComponent();
-
+/*
             for (int i = 0; i < .Count; i++)
             {
                 DelToolCB.Items.Add(.name);
             }
 
             List<string> tanks_list = SQL_class.mySelect("SELECT id, name From tanks");
-            for (int i=0; i<tanks_list.Count; i+=2)
+            for (int i=0; i<tanks_list.Count; i+=2)  
             {
                 TankComboBox.Items.Add(tanks_list[i] + ". " + tanks_list[i+1]);
             }
+            */
         }
 
         string FileName = "";
@@ -82,7 +83,7 @@ namespace ShopOfTanks
             textBox1.Text = DelToolCB.Text;
         }
         private void button2_Click(object sender, EventArgs e)
-        {
+        {/*
             for (int i = 0; i < .Count; i++)
             {
                 if (textBox1.Text == name[i])
@@ -91,6 +92,7 @@ namespace ShopOfTanks
                     Close();
                 }
             }
+            */
         }
     }
 }

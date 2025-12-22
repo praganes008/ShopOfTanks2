@@ -85,6 +85,12 @@
     <Compile Include="HelpAddToolForm.Designer.cs">
       <DependentUpon>HelpAddToolForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoBDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoBDForm.Designer.cs">
+      <DependentUpon>InfoBDForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HelpAddToolForm.resx">
       <DependentUpon>HelpAddToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoBDForm.resx">
+      <DependentUpon>InfoBDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

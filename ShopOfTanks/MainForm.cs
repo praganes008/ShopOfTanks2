@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Xml.Linq;
 
 namespace ShopOfTanks
 {
@@ -485,6 +486,12 @@ namespace ShopOfTanks
                 MessageBox.Show("добавлять запчасти могут только админы!");
             }
             MainForm_Load(null, null);
+        }
+
+        private void таблицаБДToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InfoBDForm infF = new InfoBDForm();
+            infF.ShowDialog();
         }
     }
 }
