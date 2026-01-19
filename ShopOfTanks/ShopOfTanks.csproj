@@ -104,7 +104,7 @@
       <DependentUpon>Parts.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
@@ -142,6 +142,12 @@
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL_class.cs" />
+    <Compile Include="TanksUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TanksUC.Designer.cs">
+      <DependentUpon>TanksUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToolForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TanksUC.resx">
+      <DependentUpon>TanksUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToolForm.resx">
       <DependentUpon>ToolForm.cs</DependentUpon>

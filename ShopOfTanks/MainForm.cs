@@ -63,55 +63,12 @@ namespace ShopOfTanks
             HideButton.Text = "развернуть";
             MainSelectbutton.Visible = false;
 
-            ReRead_SQL();
-        }
-
-        void ReRead_SQL()
-        {
-            List<string> tanks_list = SQL_class.mySelect("SELECT id, name, country, massa, type, price FROM tanks");
-
-            products.Clear();
-
-            for (int i=0; i<tanks_list.Count; i+=6)
-            {                                                   
-                Product product = new Product(tanks_list[i + 1],
-                                              tanks_list[i + 2],
-                                              Convert.ToInt32(tanks_list[i + 3]),
-                                              tanks_list[i + 4],
-                                              Convert.ToInt32(tanks_list[i + 5]));
-                products.Add(product);
-            }
+            TanksUC tanksUC = new TanksUC();
+            tanksUC.Dock = DockStyle.Fill;
             MainPanel.Controls.Clear();
-        }
-
-        private void PicProduct_Click(object sender, EventArgs e)//клик на картинку
-        {
-            PictureBox pb = (PictureBox)sender;
-            for(int i = 0; i< products.Count; i++)
-            {
-                if(pb.Tag.ToString() == products[i].name)
-                {
-                       ProductForm frm = new ProductForm(products[i]);
-                       frm.Show();
-                }
-            }
+            MainPanel.Controls.Add(tanksUC);
             
         }
-
-        private void lblProduct_Click(object sender, EventArgs e)//клик на надпись
-        {
-            Label lbl = (Label)sender;
-            for (int i = 0; i < products.Count; i++)
-            {
-                if (lbl.Text == products[i].name)
-                {
-                   ProductForm frm = new ProductForm(products[i]);
-                    frm.Show(); 
-                }
-            }
-            
-        }
-
         private void HideButton_Click(object sender, EventArgs e)//развернуть/свернуть
         {
             if (FiltrPanel.Height == HideButton.Height)
@@ -132,9 +89,9 @@ namespace ShopOfTanks
             frm.ShowDialog();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)//загрузка MainForm
+        /*private void MainForm_Load(object sender, EventArgs e)//загрузка MainForm
         {
-               
+             
             int x = 30;
             int y = 25;
 
@@ -157,7 +114,7 @@ namespace ShopOfTanks
                     y += 225;
                 }
             }
-        }
+        }*/
 
         private void SearchButton_Click(object sender, EventArgs e)//сёрч баттон
         {
@@ -286,7 +243,6 @@ namespace ShopOfTanks
             {
                 MessageBox.Show("добавлять товары могут только админы!");
             }
-            MainForm_Load(null, null);
         }
 
         private void DeleteTankToolStripMenuItem_Click(object sender, EventArgs e)//удалить танк клик
@@ -300,7 +256,6 @@ namespace ShopOfTanks
             {
                 MessageBox.Show("удалять товары могут только админы!");
             }
-            MainForm_Load(null, null);
         }
 
         private void MainSelectbutton_Click(object sender, EventArgs e)//избранное
@@ -485,7 +440,6 @@ namespace ShopOfTanks
             {
                 MessageBox.Show("добавлять запчасти могут только админы!");
             }
-            MainForm_Load(null, null);
         }
 
         private void таблицаБДToolStripMenuItem_Click(object sender, EventArgs e)

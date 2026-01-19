@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ShopOfTanks
 {
-    public partial class ProductForm : Form
+    public partial class ProductForm : UserControl
     {
         Product product;
         string tank_id;
